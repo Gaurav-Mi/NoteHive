@@ -12,8 +12,8 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: 'https://your-frontend-render-url.com', // Replace this with your actual frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  origin: 'https://note-hive-one.vercel.app/',  // Frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
