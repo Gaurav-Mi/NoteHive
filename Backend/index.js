@@ -6,16 +6,19 @@ const cors = require("cors");
 // Initilize .env
 require("dotenv").config({ path: "../.env" });
 
+
 // Initilize app
 const app = express();
-app.use(express.json());
-
-
 app.use(cors({
   origin: 'https://note-hive-one.vercel.app',  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
+app.options('*', cors());
+app.use(express.json());
+
+
+
 
 app.options('*', cors());
 
