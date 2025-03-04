@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+const host = process.env.REACT_APP_HOST;
 
 const Authcontext = createContext();
 
@@ -11,7 +12,7 @@ const Authstate = (props) => {
   const [alertType, setAlertType] = useState("");
   const Login = async (email, password) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/v1/login", {
+      const response = await axios.post(`${host}/v1/login`, {
         email: email,
         password: password,
       });
@@ -53,7 +54,7 @@ const Authstate = (props) => {
 
   const Signup = async (name, email, password) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/v1/signup", {
+      const response = await axios.post(`${host}/v1/signup`, {
         name: name,
         email: email,
         password: password,
