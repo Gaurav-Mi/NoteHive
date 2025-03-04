@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: 'https://note-hive-one.vercel.app/',  // Frontend URL
+  origin: 'https://note-hive-one.vercel.app',  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
