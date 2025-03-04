@@ -10,7 +10,15 @@ require("dotenv").config({ path: "../.env" });
 const app = express();
 app.use(express.json());
 
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://your-frontend-render-url.com', // Replace this with your actual frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+
+app.options('*', cors());
+
 
 // Initilize MongoDB Connection
 
