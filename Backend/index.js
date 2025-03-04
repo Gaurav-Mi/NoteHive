@@ -9,18 +9,13 @@ require("dotenv").config({ path: "../.env" });
 
 // Initilize app
 const app = express();
-app.use(cors({
-  origin: 'https://note-hive-one.vercel.app',  
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
-app.options('*', cors());
+app.use(cors())
 app.use(express.json());
 
 
 
 
-app.options('*', cors());
+
 
 
 // Initilize MongoDB Connection
