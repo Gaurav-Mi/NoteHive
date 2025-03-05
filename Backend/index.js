@@ -6,17 +6,10 @@ const cors = require("cors");
 // Initilize .env
 require("dotenv").config({ path: "../.env" });
 
-
 // Initilize app
 const app = express();
-app.use(cors())
+app.use(cors());
 app.use(express.json());
-
-
-
-
-
-
 
 // Initilize MongoDB Connection
 
