@@ -16,7 +16,7 @@ app.use(express.json());
 connectDB(process.env.MONGO_URI);
 
 // Fallback for PORT env
-const port = process.env.PORT || 5000;
+const port = process.env.MongoPORT || 5000;
 
 // Routes
 
