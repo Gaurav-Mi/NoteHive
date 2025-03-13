@@ -27,3 +27,8 @@ app.use("/api/v1/notes", notesRoute);
 app.listen(port, () => {
   console.log(`App Listening On ${port}`);
 });
+
+setInterval(() => {
+  console.log("Restarting service...");
+  process.exit(1); // Forces the service to restart
+}, 1000 * 60 * 60 * 1); // 1 HOUR
